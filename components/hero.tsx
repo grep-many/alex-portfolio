@@ -22,7 +22,7 @@ const Hero = () => {
        *  change bg color to bg-black-100 and reduce grid color from
        *  0.2 to 0.03
        */}
-      <div className="dark:bg-black-100 dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-white">
+      <div className="bg-blue-900 dark:bg-black-100 dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-white">
         {/* Radial gradient for the container to give a faded look */}
         <div
           // chnage the bg to bg-black-100, so it matches the bg color and will blend in
