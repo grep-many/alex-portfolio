@@ -28,7 +28,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
   return (
     // change md:grid-cols-3 to md:grid-cols-4, gap-4 to gap-10
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto gap-10 ">
+    <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-10 p-10 md:grid-cols-4">
       {cards.map((card, i) => (
         <Button
           key={i}
@@ -37,26 +37,21 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
           duration={10000}
           //   add className={cn(card.className, "")}
           className={cn(
-            card.className
+            card.className,
             // "bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           )}
         >
-          <div
-            className={cn(
-              card.className,
-              "relative border-3 border-yellow-500"
-            )}
-          >
+          <div className={cn(card.className, "relative border-3 border-yellow-500")}>
             <motion.div
               onClick={() => handleClick(card)}
               className={cn(
                 card.className,
                 "relative overflow-hidden",
                 selected?.id === card.id
-                  ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                  ? "absolute inset-0 z-50 m-auto flex h-1/2 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:w-1/2"
                   : lastSelected?.id === card.id
-                  ? "z-40 bg-white rounded-xl h-full w-full"
-                  : "bg-white rounded-xl h-full w-full"
+                    ? "z-40 h-full w-full rounded-xl bg-white"
+                    : "h-full w-full rounded-xl bg-white",
               )}
               layout
             >
@@ -69,8 +64,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
-          selected?.id ? "pointer-events-auto" : "pointer-events-none"
+          "absolute top-0 left-0 z-10 h-full w-full bg-black opacity-0",
+          selected?.id ? "pointer-events-auto" : "pointer-events-none",
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
       />
@@ -88,8 +83,8 @@ const BlurImage = ({ card }: { card: Card }) => {
       width="100"
       onLoad={() => setLoaded(true)}
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
-        loaded ? "blur-none" : "blur-md"
+        "absolute inset-0 h-full w-full object-cover object-top transition duration-200",
+        loaded ? "blur-none" : "blur-md",
       )}
       alt="thumbnail"
     />
@@ -98,7 +93,7 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
+    <div className="relative z-[60] flex h-full w-full flex-col justify-end rounded-lg bg-transparent shadow-2xl">
       <motion.div
         initial={{
           opacity: 0,
@@ -106,7 +101,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 0.6,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+        className="absolute inset-0 z-10 h-full w-full bg-black opacity-60"
       />
       <motion.div
         initial={{
@@ -121,7 +116,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]"
+        className="relative z-[70] px-8 pb-4"
       >
         {selected?.content}
       </motion.div>

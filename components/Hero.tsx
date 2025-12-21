@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -22,15 +23,11 @@ const Hero = () => {
        *  change bg color to bg-black-100 and reduce grid color from
        *  0.2 to 0.03
        */}
-      <div className="bg-blue-900 dark:bg-black-100 dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-white">
-        {/* Radial gradient for the container to give a faded look */}
-        <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="dark:bg-black-100 pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
-        />
-      </div>
+      <div className="absolute inset-0 bg-transparent! bg-[linear-gradient(to_right,#fff_3.5px,transparent_3.5px),linear-gradient(to_bottom,#fff_3.5px,transparent_3.5px)] bg-size-[100px_100px] opacity-3 blur-[0.5px]" />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="dark:bg-black-100 pointer-events-none absolute inset-0 flex items-center justify-center bg-white mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-      <div className="relative z-10 my-20 flex justify-center">
+      <div className="relative z-10 mx-10 my-20 flex justify-center">
         <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
           <p className="max-w-80 text-center text-xs tracking-widest text-blue-100 uppercase">
             Dynamic Web Magic with Next.js
@@ -43,11 +40,11 @@ const Hero = () => {
            */}
           <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="last:text-purple nth-last-[2]:text-purple text-center text-[40px] font-bold md:text-5xl lg:text-6xl"
           />
 
-          <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+          <p className="my-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
+            Hi! I&apos;m Alex, a Next.js Developer based in Croatia.
           </p>
 
           <a href="#about">
