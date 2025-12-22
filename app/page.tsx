@@ -1,11 +1,16 @@
+import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { navItems } from "@/data";
 
 const Home = () => (
-  <main className="bg-black-100 relative mx-auto flex flex-col items-center justify-center overflow-hidden sm:px-10">
-    <div className="w-full max-w-7xl">
+  <>
+    <FloatingNav navItems={navItems} />
+    <main className="w-full max-w-7xl">
       <Hero />
-    </div>
-  </main>
+      <Grid />
+    </main>
+  </>
 );
 
 export default Home;

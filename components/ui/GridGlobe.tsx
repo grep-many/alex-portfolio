@@ -421,7 +421,7 @@ const GridGlobe = () => {
             don&apos;t forget to share it.
           </p>
         </motion.div> */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full bg-gradient-to-b from-transparent to-white select-none dark:to-black" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full bg-linear-to-b from-transparent to-white select-none dark:to-black" />
         {/* remove -bottom-20 */}
         <div className="absolute z-10 h-72 w-full md:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />

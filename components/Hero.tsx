@@ -1,12 +1,12 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
-import MagicButton from "./MagicButton";
+import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <div className="pt-36 pb-20">
+    <section className="pt-36 pb-20">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -24,7 +24,7 @@ const Hero = () => {
        */}
       <div className="absolute inset-0 bg-transparent! bg-[linear-gradient(to_right,#fff_3.5px,transparent_3.5px),linear-gradient(to_bottom,#fff_3.5px,transparent_3.5px)] bg-size-[100px_100px] opacity-3 blur-[0.5px]" />
       {/* Radial gradient for the container to give a faded look */}
-      <div className="dark:bg-black-100 pointer-events-none absolute inset-0 flex items-center justify-center bg-white mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="bg-black-100 pointer-events-none absolute inset-0 flex items-center justify-center mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <div className="relative z-10 mx-10 my-20 flex justify-center">
         <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
@@ -51,7 +51,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

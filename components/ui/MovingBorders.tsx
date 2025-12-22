@@ -33,7 +33,7 @@ export function Button({
     <Component
       className={cn(
         // remove h-16 w-40, add  md:col-span-2
-        "relative overflow-hidden bg-transparent p-[1px] text-xl md:col-span-2 md:row-span-1",
+        "relative overflow-hidden bg-transparent p-px text-xl md:col-span-2 md:row-span-1",
         containerClassName,
       )}
       style={{
@@ -57,7 +57,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.] text-sm text-white antialiased backdrop-blur-xl",
+          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/0 text-sm text-white antialiased backdrop-blur-xl",
           className,
         )}
         style={{
@@ -83,7 +83,7 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: any;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<any>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
