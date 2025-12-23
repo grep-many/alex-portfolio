@@ -57,9 +57,16 @@ export const BentoGridItem = ({
   const [copied, setCopied] = React.useState(false);
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    const text = "alex@gmail.com";
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+        }, 4000);
+      })
+      .catch((err) => console.log("Failed to copy", err));
   };
 
   return (
@@ -169,7 +176,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="bg-[#161A31]!"
               />
             </div>
           )}

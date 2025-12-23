@@ -13,7 +13,10 @@ const Projects = () => (
           className="flex h-100 w-[80vw] items-center justify-center sm:w-96 lg:min-h-130"
           key={id}
         >
-          <PinContainer title={link.split(/[/?]/)[4].split(/[- ]/).join("").slice(0,20)} href={link}>
+          <PinContainer
+            title={link.split(/[/?]/)[4].split(/[- ]/).join("").slice(0, 20)}
+            href={link}
+          >
             <div className="relative mb-10 flex h-[20vh] w-[80vw] items-center justify-center overflow-hidden sm:w-96 lg:h-[30vh]">
               <div
                 className="relative h-full w-full overflow-hidden lg:rounded-3xl"

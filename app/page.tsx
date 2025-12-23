@@ -1,3 +1,4 @@
+import Clients from "@/components/Clients";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -11,6 +12,7 @@ const Home = () => (
       <Hero />
       <Grid />
       <Projects />
+      <Clients />
     </main>
   </>
 );

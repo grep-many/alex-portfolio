@@ -19,7 +19,7 @@ const Hero = () => {
         <Spotlight className="absolute top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
         <Spotlight className="absolute top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
-      
+
       {/**
        *  UI: grid
        *  change bg color to bg-black-100 and reduce grid color from
