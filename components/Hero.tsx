@@ -11,12 +11,15 @@ const Hero = () => {
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
        */}
-      <div>
-        <Spotlight className="-top-40 -left-10 h-screen md:-top-20 md:-left-32" fill="white" />
-        <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
-        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
+      <div className="absolute top-0 left-0 h-screen w-screen overflow-x-hidden">
+        <Spotlight
+          className="absolute -top-40 -left-10 h-screen md:-top-20 md:-left-32"
+          fill="white"
+        />
+        <Spotlight className="absolute top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
+        <Spotlight className="absolute top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
-
+      
       {/**
        *  UI: grid
        *  change bg color to bg-black-100 and reduce grid color from

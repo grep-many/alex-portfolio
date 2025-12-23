@@ -2,7 +2,7 @@ import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const Grid = () => (
-  <section id="about">
+  <section id="about" className="max-md:px-2">
     <BentoGrid>
       {gridItems.map(
         ({ id, title, img, description, className, titleClassName, imgClassName, spareImg }) => (
