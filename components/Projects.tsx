@@ -7,13 +7,13 @@ const Projects = () => (
     <h1 className="heading">
       A small selection of <span className="text-purple">recent projects</span>
     </h1>
-    <div className="mt-10 flex flex-wrap items-center justify-center gap-x-24 gap-y-8 p-4">
+    <div className="mt-10 flex flex-wrap items-center justify-center gap-x-24 p-4">
       {projects.map(({ id, title, des, img, iconLists, link }) => (
         <div
           className="flex h-100 w-[80vw] items-center justify-center sm:w-96 lg:min-h-130"
           key={id}
         >
-          <PinContainer title={title.trim().split(/[- ]/).join("")} href={link}>
+          <PinContainer title={link.split(/[/?]/)[4].split(/[- ]/).join("").slice(0,20)} href={link}>
             <div className="relative mb-10 flex h-[20vh] w-[80vw] items-center justify-center overflow-hidden sm:w-96 lg:h-[30vh]">
               <div
                 className="relative h-full w-full overflow-hidden lg:rounded-3xl"
