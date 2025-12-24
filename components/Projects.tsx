@@ -1,7 +1,6 @@
 import { basePath, projects } from "@/data";
 import { FaLocationArrow } from "react-icons/fa6";
 import { PinContainer } from "./ui/Pin";
-import Image from "next/image";
 
 const Projects = () => (
   <section className="py-20" id="projects">
@@ -23,8 +22,8 @@ const Projects = () => (
                 className="relative h-full w-full overflow-hidden lg:rounded-xl"
                 style={{ backgroundColor: "#13162D" }}
               >
-                <Image src={`${basePath}/bg.png`} alt="bgimg" />
-                <Image src={img} alt="cover" className="absolute bottom-0 z-10" />
+                <img src={`${basePath}/bg.png`} alt="bgimg" />
+                <img src={img} alt="cover" className="absolute bottom-0 z-10" />
               </div>
             </div>
 
@@ -50,7 +49,7 @@ const Projects = () => (
                       transform: `translateX(-${5 * index + 2}px)`,
                     }}
                   >
-                    <Image src={icon} alt="icon5" className="p-2" />
+                    <img src={icon} alt="icon5" className="p-2" />
                   </div>
                 ))}
               </div>

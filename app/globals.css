@@ -147,7 +147,7 @@
 
 @layer base {
   * {
-    @apply border-border scroll-smooth;
+    @apply border-border scroll-smooth select-none;
 
     &::selection {
       @apply text-black-100 bg-white/30;

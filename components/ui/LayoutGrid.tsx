@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, JSX } from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
+
 import { cn } from "@/lib/utils";
 import { Button } from "./MovingBorders";
+import Image from "next/image";
 
 type Card = {
   id: number;

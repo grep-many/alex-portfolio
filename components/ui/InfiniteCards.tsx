@@ -2,7 +2,7 @@
 
 import { basePath } from "@/data";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -109,7 +109,7 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 {/* add this div for the profile img */}
                 <div className="me-3">
-                  <Image src={`${basePath}/profile.svg`} alt="profile" />
+                  <img src={`${basePath}/profile.svg`} alt="profile" />
                 </div>
                 <span className="flex flex-col gap-1">
                   {/* change text color, font-normal to font-bold, text-xl */}
