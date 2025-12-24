@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1>
+  <img src="./app/icon-512.png" alt="Alex Portfolio Logo" width="40" style="vertical-align: middle;" />
+  Alex — Developer Portfolio
+</h1>
 
-## Getting Started
+![Deploy](https://img.shields.io/github/actions/workflow/status/grep-many/alex-portfolio/deploy.yml?label=Deploy)
+[![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue)](https://grep-many.github.io/alex-portfolio/)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![React](https://img.shields.io/badge/React-19-61DAFB)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8)
+![Three.js](https://img.shields.io/badge/Three.js-WebGL-black)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-First, run the development server:
+> A modern **3D developer portfolio** built with **Next.js 16**, **React 19**, **TailwindCSS 4**, and **Three.js**.
+
+---
+
+## ✨ Overview
+
+**Alex Portfolio** is a high-performance, visually rich personal portfolio website built to showcase projects, experience, and skills using immersive visuals and smooth animations.
+
+---
+
+## 🖥️ Desktop Preview
+
+![desktop-preview](./screenshots/preview.png)
+
+---
+
+## 📦 Tech Stack
+
+### Frontend
+- Next.js 16 (App Router)
+- React 19
+- TailwindCSS 4
+- Three.js
+- @react-three/fiber
+- @react-three/drei
+
+### Developer Tools
+- TypeScript 5
+- ESLint 9
+- Prettier
+
+---
+
+## 📁 Folder Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── app
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── globals.css
+│   └── icons & metadata
+├── components
+│   ├── Hero, Projects, Experience, Clients
+│   ├── Approach, Grid, Footer
+│   └── ui
+│       ├── Globe, BentoGrid, FloatingNavbar
+│       ├── CanvasRevealEffect, Spotlight
+│       └── Reusable animated UI components
+├── data
+│   ├── projects.ts
+│   ├── navItems.ts
+│   ├── workExperience.ts
+│   ├── testimonials.ts
+│   └── socialMedia.ts
+├── public
+│   ├── images, svg, icons
+│   ├── manifest.webmanifest
+│   └── static assets
+├── lib
+│   └── utils.ts
+├── constants.ts
+├── screenshots
+│   └── preview.png
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `constants.ts`:
 
-## Learn More
+```ts
+export const name = "Alex";
+export const github = "alex-custom";
+export const email = "alex@custom.com";
+export const basePath = "/alex-portfolio";
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git clone https://github.com/grep-many/alex-portfolio.git
+cd alex-portfolio
+npm install
+npm run dev
+```
 
-## Deploy on Vercel
+---
+## 🚀 Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- WebGL-powered 3D globe & canvas animations
+- Smooth motion effects and transitions
+- Modular UI component system
+- SEO-friendly Next.js App Router
+- GitHub Pages compatible (basePath support)
+- Fully responsive layout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🪪 License
+This project is open-source under the [**MIT License**](./LICENSE).
