@@ -19,7 +19,7 @@ const Home = () => (
       <Experience />
       <Approach />
     </main>
-    <Footer/>
+    <Footer />
   </>
 );
 

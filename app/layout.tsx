@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { basePath, name } from "@/constants";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: false });
 
 export const metadata: Metadata = {
-  title: "Alex's Portfolio",
+  title: `${name.split(" ")[0]}'s Portfolio`,
   description: "Modern & Minimalist portfolio",
+  manifest: `${basePath}/manifest.webmanifest`,
 };
 
 export default function RootLayout({

@@ -10,6 +10,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
+import { email } from "@/constants";
 
 export const BentoGrid = ({
   className,
@@ -57,9 +58,8 @@ export const BentoGridItem = ({
   const [copied, setCopied] = React.useState(false);
 
   const handleCopy = () => {
-    const text = "mailto:alex@dummy.com";
     navigator.clipboard
-      .writeText(text)
+      .writeText(email)
       .then(() => {
         setCopied(true);
         setTimeout(() => {

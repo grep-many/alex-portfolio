@@ -55,7 +55,7 @@ const Card = ({
             y: hovered ? -16 : 0,
             scale: hovered ? 0.95 : 1,
           }}
-          transition={{ duration: 0.20, ease: "easeOut" }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="absolute top-1/2 left-1/2 flex min-w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
         >
           {icon}
@@ -68,7 +68,7 @@ const Card = ({
             opacity: hovered ? 1 : 0,
             y: hovered ? -8 : 0,
           }}
-          transition={{ duration: 0.20, ease: "easeOut" }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="mt-4 text-3xl font-bold text-white"
         >
           {title}
@@ -81,7 +81,7 @@ const Card = ({
             opacity: hovered ? 1 : 0,
             y: hovered ? -8 : 0,
           }}
-          transition={{ duration: 0.20, delay: 0.05, ease: "easeOut" }}
+          transition={{ duration: 0.2, delay: 0.05, ease: "easeOut" }}
           className="mt-4 text-sm"
           style={{ color: "#E4ECFF" }}
         >
