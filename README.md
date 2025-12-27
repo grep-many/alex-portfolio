@@ -1,5 +1,5 @@
 <h1>
-  <img src="./app/icon-512.png" alt="Alex Portfolio Logo" width="40" style="vertical-align: middle;" />
+  <img src="./public/icon-512.png" alt="Alex Portfolio Logo" width="40" style="vertical-align: middle;" />
   Alex — Developer Portfolio
 </h1>
 
